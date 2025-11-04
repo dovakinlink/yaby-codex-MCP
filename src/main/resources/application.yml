@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: mcp-service
+  datasource:
+    url: jdbc:mysql://localhost:3306/yaby?useUnicode=true&useSSL=false&connectionCollation=utf8mb4_0900_ai_ci&serverTimezone=Asia/Shanghai
+    username: root
+    password: Root@123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    hikari:
+      connectionInitSql: SET NAMES utf8mb4
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.MySQLDialect
+    open-in-view: false
+
+server:
+  port: 8100
+  servlet:
+    context-path: /
