@@ -1,8 +1,10 @@
 # 临床试验信息读取 MCP 服务
 
+
 本项目提供一个兼容最新 OpenAI Agent Builder 的 Model Context Protocol (MCP) 远程服务示例，
 使用 Spring Boot 和官方 Java SDK 的 Streamable HTTP 传输实现。服务当前暴露一个用于连通性
 校验的 `ping` 工具，帮助快速验证 Agent Builder 与自建 MCP 服务器之间的端到端流程。
+
 
 ## 环境准备
 
@@ -68,3 +70,4 @@ npx -y @modelcontextprotocol/inspector
 
 如需扩展其他工具，可在 `com.example.mcp.service.McpToolService` 添加业务逻辑，
 并在 `com.example.mcp.config.McpServerConfiguration` 中注册对应的工具描述与执行处理。
+
